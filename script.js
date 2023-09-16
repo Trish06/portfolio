@@ -120,3 +120,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Function to handle the scroll event
+  function handleScroll(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver(handleScroll, {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin around the viewport
+    threshold: 0.3, // 20% of the element must be visible
+  });
+
+  // Observe all elements with the class "reveal-on-scroll"
+  document.querySelectorAll(".reveal-on-scroll").forEach((element) => {
+    observer.observe(element);
+  });

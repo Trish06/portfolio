@@ -985,7 +985,7 @@ main {
 #contact .contact-row .contact-right form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin: 20px 0;
 }
 
@@ -993,7 +993,7 @@ main {
 #contact .contact-row .contact-right form textarea {
   width: 100%;
   display: block;
-  margin: 30px 0;
+  margin: 10px 0;
   font-size: 15px;
   font-weight: 500;
   color: var(--textColor);
@@ -1036,3 +1036,15 @@ main {
   }
 }
 /* == Contact Section End == */
+
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Move elements down slightly */
+    transition: opacity 0.9s ease, transform 0.9s ease; /* Add smooth transitions */
+  }
+
+  .revealed {
+    opacity: 1;
+    transform: translateY(0); /* Reset the transform */
+  }
