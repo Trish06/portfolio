@@ -10,15 +10,6 @@
   scroll-behavior: smooth;
 }
 
-/* Global Variables */
-/* :root {
-  --sideBGColor: #040b14;
-  --themeColor: #00a78e;
-  --iconBGColor: #2c2f3f;
-  --textColor: #353535;
-  --bgColor: #f7f7f7;
-} */
-
 :root {
   --sideBGColor: #683b2b;
   --themeColor: #cf845d;
@@ -1037,14 +1028,15 @@ main {
 }
 /* == Contact Section End == */
 
-
+/* == Scroll Animaation Start == */
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(20px); /* Move elements down slightly */
-    transition: opacity 0.9s ease, transform 0.9s ease; /* Add smooth transitions */
+    transform: translateY(20px); 
+    transition: opacity 0.9s ease, transform 0.9s ease; 
   }
 
   .revealed {
     opacity: 1;
-    transform: translateY(0); /* Reset the transform */
+    transform: translateY(0); 
   }
+/* == Scroll Animaation End == */

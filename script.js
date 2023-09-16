@@ -1,28 +1,3 @@
-// Send Mail
-function sendMail() {
-  var params = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    subject: document.getElementById('subject').value,
-    message: document.getElementById('message').value,
-  };
-  
-  const serviceId = 'service_zvlotw7';
-  const templateId = 'template_blrhu2q';
-
-  emailjs
-    .send(serviceId, templateId, params)
-    .then((res) => {
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('subject').value = '';
-      document.getElementById('email').value = '';
-      console.log(res);
-      alert('Your message sent successfully!');
-    })
-    .catch((err) => console.log(err));
-}
-
 // Header
 let MenuBtn = document.getElementById('MenuBtn');
 
@@ -32,7 +7,6 @@ MenuBtn.addEventListener('click', function (e) {
 });
 
 // Type Effect
-
 let typed = new Typed('.auto-input', {
   strings: [
     'Front-End Developer',
@@ -49,7 +23,7 @@ let typed = new Typed('.auto-input', {
 
 // Get All Links
 let navLinks = document.querySelectorAll('nav ul li a');
-//Get All Section
+
 let sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', function () {
@@ -75,8 +49,8 @@ window.addEventListener('scroll', function () {
 // Function to animate the progress bars with a given class
 function animateProgressBar(percentageElement, progressBarElement, targetPercentage) {
   let currentProgress = 0;
-  const animationDuration = 1000; // in milliseconds
-  const frameRate = 30; // in frames per second
+  const animationDuration = 1000; 
+  const frameRate = 30; 
 
   const increment = (targetPercentage - currentProgress) / (animationDuration / (1000 / frameRate));
 
@@ -85,12 +59,12 @@ function animateProgressBar(percentageElement, progressBarElement, targetPercent
     progressBarElement.style.width = currentProgress + '%';
 
     if (currentProgress >= targetPercentage) {
-      currentProgress = targetPercentage; // Ensure it reaches the exact target
-      progressBarElement.style.width = currentProgress + '%'; // Update progress bar width
+      currentProgress = targetPercentage; 
+      progressBarElement.style.width = currentProgress + '%'; 
       clearInterval(animationInterval);
     }
 
-    percentageElement.textContent = currentProgress.toFixed(0) + '%'; // Update the displayed percentage without decimal places
+    percentageElement.textContent = currentProgress.toFixed(0) + '%'; 
   }, 1000 / frameRate);
 }
 
@@ -111,11 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
     animateProgressBar(percentageElements[i], progressBarElements[i], targetPercentage);
   }
 
-  // Add event listener to the "Skills" navigation link
   const skillsLink = document.querySelector('.skills-button a');
   skillsLink.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default link behavior (e.g., page scroll)
-    startSkillAnimation('skill'); // Start the progress animation for the skills section
+    event.preventDefault(); 
+    startSkillAnimation('skill'); 
   });
 });
 
@@ -132,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Create an Intersection Observer
   const observer = new IntersectionObserver(handleScroll, {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px", // No margin around the viewport
-    threshold: 0.3, // 20% of the element must be visible
+    root: null, 
+    rootMargin: "0px", 
+    threshold: 0.3, 
   });
 
   // Observe all elements with the class "reveal-on-scroll"
