@@ -55,19 +55,19 @@ header .profile-container {
 }
 
 header .profile::before {
-    content: "";
-    width: 170px;
-    height: 69%;
-    border: 0.2rem solid transparent;
-    border-top: 0.2rem solid var(--themeColor);
-    border-bottom: 0.2rem solid var(--themeColor);
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: 0px;
-    right: -10px;
-    bottom: -10px;
-    animation: spin 4s linear infinite;
+  content: '';
+  width: 170px;
+  height: 69%;
+  border: 0.2rem solid transparent;
+  border-top: 0.2rem solid var(--themeColor);
+  border-bottom: 0.2rem solid var(--themeColor);
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  right: -10px;
+  bottom: -10px;
+  animation: spin 4s linear infinite;
 }
 
 header .profile-setting {
@@ -848,7 +848,7 @@ main {
     grid-gap: 15px;
   }
 
-  h4.portfolio-title{
+  h4.portfolio-title {
     font-size: 8px !important;
   }
 
@@ -1058,13 +1058,13 @@ main {
 
 /* == Scroll Animaation Start == */
 .reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(20px); 
-    transition: opacity 0.9s ease, transform 0.9s ease; 
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
 
-  .revealed {
-    opacity: 1;
-    transform: translateY(0); 
-  }
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* == Scroll Animaation End == */
